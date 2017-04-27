@@ -1,0 +1,40 @@
+This code books describes the data used and transformations done by the script run_analysis.R
+
+# Overview
+
+The data used in this script is from the recordings of 30 subjects
+performing activities of daily living (ADL) while carrying a waist-mounted smartphone with embedded inertial sensors
+
+# Data Used
+
+The original data was obtained from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
+
+and the files used are
+
+X_test.txt
+y_test.txt
+subject_test.txt
+X_train.txt
+y_train.txt
+subject_train.txt
+activity_labels.txt
+features.txt
+
+X_test.txt and X_train.txt are joined together to create the data set featuresData. The variables names for featuresData are taken from features.txt file. 
+
+y_test.txt and y_train.txt are joined together to create the data set activityData. This has one variable and has been labelled “activity”. Each activity is given a descriptive label taken from the activity_labels.txt file.
+
+subject_test.txt and subject_train.txt are joined together to create the data set subjectData.
+
+featuresData, activityData and subjectData are joined together to create the dat dataset. 
+
+The subDat dataset is a subset of the dat data set and includes only the mean and standard deviation for each measurement. 
+
+The variable names of subDat are given descriptive variable names using the following logic.
+Prefix t == Time
+Prefix f == Frequency
+Acc == Accelerometer
+Gyro == Gyroscope
+Mag == Magnitude
+
+The tidyData set is a summarisation of the subDat dataset showing the average of each variable for each activity and each subject.
