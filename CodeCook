@@ -1,6 +1,6 @@
 This codebook describes the data used and transformations done by the script run_analysis.R
 
-# #Overview
+# Overview
 
 The data used in this script is from the recordings of 30 subjects
 performing activities of daily living (ADL) while carrying a waist-mounted smartphone with embedded inertial sensors
